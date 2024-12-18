@@ -1,5 +1,7 @@
+import Testimonial from './testimonial'
 const Service = () => {
 return(
+<>
 <div class="container-xxl py-5">
 <div class="container py-5 px-lg-5">
     <div class="wow fadeInUp" data-wow-delay="0.1s">
@@ -70,6 +72,8 @@ return(
     </div>
 </div>
 </div>
+<Testimonial/>
+</>
 )
 }
 export default Service

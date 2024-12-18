@@ -32,7 +32,7 @@ const Contact = () => {
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Escreva Sua Mensagem Aqui" id="message" style="height: 150px"></textarea>
+                                    <textarea class="form-control" placeholder="Escreva Sua Mensagem Aqui" id="message" ></textarea>
                                     <label for="message">Mensagem</label>
                                 </div>
                             </div>

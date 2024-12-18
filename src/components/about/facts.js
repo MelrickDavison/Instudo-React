@@ -1,8 +1,7 @@
-import NewsLetter from "../service/newsletter"
+
 const facts = () => {
     return(
     <>
-        <NewsLetter/>
         <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
                 <div class="row g-4">

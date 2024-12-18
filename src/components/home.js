@@ -1,7 +1,8 @@
+import Facts from './about/facts'
 const Home = () => {
     return(
         <>
-            <h1>Melrick</h1>
+        <Facts/>
         </>
     )
 }
