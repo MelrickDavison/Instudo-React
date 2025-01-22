@@ -11,7 +11,7 @@ const Navbar = () => {
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <Link to={'/'} class="nav-item nav-link">Home</Link>
                     
                     <Link to={'/service'} class="nav-item nav-link">Serviços</Link>
                     <Link to={"/cursos"} class="nav-item nav-link">Cursos</Link>  
