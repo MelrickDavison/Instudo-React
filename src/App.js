@@ -7,6 +7,8 @@ import Facts from './components/about/facts';
 import Service from './components/service/service'
 import Contact from './components/contact/contact'
 import Team from './components/team/team'
+import FormCadastro from './components/cadastroFom';
+import Login from './components/login';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
               <Route path='/about' element={<Team/>}/>
               <Route path='/cursos' element={<Facts/>}/>
+              <Route path='/formCadastro' element={<FormCadastro/>}/>
+              <Route path='/login' element={<Login/>}/>
         </Routes>
     <Footer/>
     </>

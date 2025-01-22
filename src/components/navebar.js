@@ -19,8 +19,8 @@ const Navbar = () => {
                     
                     <Link to={'/contact'} class="nav-item nav-link">Contato</Link>
                 </div>
-                <a href="form.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Inscreva-se</a>
-                <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</a>
+                <Link to={'/formCadastro'} class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"> Cadastre-se </Link>
+                <Link to={'/login'} class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Login</Link>
             </div>
         </nav>
 

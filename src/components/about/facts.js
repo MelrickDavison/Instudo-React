@@ -1,5 +1,5 @@
 
-const facts = () => {
+const Facts = () => {
     return(
     <>
         <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -31,4 +31,4 @@ const facts = () => {
     </>
     )
 }
-export default facts
+export default Facts
