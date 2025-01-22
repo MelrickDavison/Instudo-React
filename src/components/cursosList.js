@@ -23,7 +23,6 @@ const CursosList = () => {
             cursos.map(curso => (
               <li key={curso.id} className="list-group-item d-flex justify-content-between">
                 <Link to={`/cursos/${curso.id}`}>{curso.nome}</Link>
-                <Link to={`/cursos/${curso.id}/editar`}>editar</Link>
               </li>
             ))
         }

@@ -22,9 +22,9 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
               <Route path='/about' element={<Team/>}/>
               <Route path='/cursos' element={<CursosList/>}/>
+              <Route path='/cursos/:id' element={<CursoDetalhe/>}/>
               <Route path='/formCadastro' element={<FormCadastro/>}/>
               <Route path='/login' element={<Login/>}/>
-              <Route path='/cursos/:id' element={<CursoDetalhe/>}/>
         </Routes>
     <Footer/>
     </>
