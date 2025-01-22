@@ -10,6 +10,7 @@ import Team from './components/team/team'
 import FormCadastro from './components/cadastroFom';
 import Login from './components/login';
 import CursosList from './components/cursosList';
+import CursoDetalhe from './components/cursoDetalhe';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path='/cursos' element={<CursosList/>}/>
               <Route path='/formCadastro' element={<FormCadastro/>}/>
               <Route path='/login' element={<Login/>}/>
+              <Route path='/cursos/:id' element={<CursoDetalhe/>}/>
         </Routes>
     <Footer/>
     </>
