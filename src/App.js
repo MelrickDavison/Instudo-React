@@ -9,6 +9,7 @@ import Contact from './components/contact/contact'
 import Team from './components/team/team'
 import FormCadastro from './components/cadastroFom';
 import Login from './components/login';
+import CursosList from './components/cursosList';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
               <Route path="/service" element={<Service/>}/>
               <Route path="/contact" element={<Contact/>}/>
               <Route path='/about' element={<Team/>}/>
-              <Route path='/cursos' element={<Facts/>}/>
+              <Route path='/cursos' element={<CursosList/>}/>
               <Route path='/formCadastro' element={<FormCadastro/>}/>
               <Route path='/login' element={<Login/>}/>
         </Routes>

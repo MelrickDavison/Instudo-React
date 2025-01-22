@@ -19,6 +19,6 @@ class Cursos {
     }
 }
 
-const cursos = new Cursos();
+const cursosService = new Cursos();
 
-export default cursos;
+export default cursosService;
