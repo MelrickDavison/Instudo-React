@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/navebar';
 import Footer from './components/footer';
 import Home from './components/home'
-import Facts from './components/about/facts';
 import Service from './components/service/service'
 import Contact from './components/contact/contact'
 import Team from './components/team/team'
