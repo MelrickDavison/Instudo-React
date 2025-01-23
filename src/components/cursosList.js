@@ -14,8 +14,12 @@ const CursosList = () => {
     useEffect(() => {
         const getCursos = async () => {
             await getDocs(collectionRef).then((cursos) => {
-              let cursosData = cursos.docs.map((doc) => ({ ...doc.data()}))
-              setCursos(cursosData)
+
+              let cursosData = cursos.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+              
+              setCursos(cursosData);
+
+              console.log(cursosData[0]?.nome);
               }).catch((err) => {
                 console.log(err);
               })
@@ -25,20 +29,18 @@ const CursosList = () => {
    
    return (
     <>
-    {cursos.map(({ curso, id }) => 
-    <div className="container mt-5" key={id}>
-      <h1>Produtos</h1>
-      <ul className="list-group">
+        <h1>Cursos</h1>
 
-              <li key={id} className="list-group-item d-flex justify-content-between">
-                <Link to={`/cursos/${id}`}>&nbsp;{curso}</Link>
-              </li>
+    <div className="container mt-5">
   
-      </ul>
-    </div>
-    
-    )}
-   
+      <ul className="list-group">
+        {cursos.map((curso) => 
+          <li key={curso.id} className="list-group-item d-flex justify-content-between">
+            <Link to={`/cursos/${curso.id}`}>&nbsp;{curso.nome}</Link>
+          </li>
+      )}
+     </ul>
+     </div>
     </>
    )
  
