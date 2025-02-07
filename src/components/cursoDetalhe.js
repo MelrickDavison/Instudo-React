@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { doc, getDoc} from 'firebase/firestore'
-import { db } from '../services/firebase.config'
+import cursosService from '../services/cursoService';
 
 const CursoDetalhe = () => {
   const { id } = useParams();
   const [cursoEncontrado, setCursoEncontrado] = useState('');
   
   useEffect(() => {
-    const fetchCurso = async () => {
-      console.log(id)
-     const  cursoRef =  doc(db, 'cursos', id)
-     const getCurso = await getDoc(cursoRef)
-     setCursoEncontrado(getCurso.data())
+    async function fetchCurso(){
+      try {
+        const result = await cursosService.getCursoById(id);
+        setCursoEncontrado(result);
+      } catch (error) {
+        console.error("Erro ao buscar cursos:", error);
       }
-
-    fetchCurso()
-  }, [id]);
+    }
+    fetchCurso();
+   }, [])
 
   return (
     <div className="container mt-5">

@@ -1,32 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import cursosService from '../services/cursos';
-import {  collection, getDocs  } from 'firebase/firestore'
-import { db } from '../services/firebase.config'
-const collectionRef = collection(db, 'cursos');
-
-
+import cursosService from '../services/cursoService';
 
 const CursosList = () => {
 
-    const [cursos, setCursos] = useState([]);
+     const [cursos, setCursos] = useState([]);
 
-    useEffect(() => {
-        const getCursos = async () => {
-            await getDocs(collectionRef).then((cursos) => {
-
-              let cursosData = cursos.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-              
-              setCursos(cursosData);
-
-              console.log(cursosData[0]?.nome);
-              }).catch((err) => {
-                console.log(err);
-              })
-            }
-          getCursos()
-      }, []);
-   
+     useEffect(() => {
+      async function fetchCurso(){
+        try {
+          const result = await cursosService.getCursos();
+          setCursos(result);
+        } catch (error) {
+          console.error("Erro ao buscar cursos:", error);
+        }
+      }
+      fetchCurso();
+     }, [])
    return (
     <>
         <h1>Cursos</h1>
